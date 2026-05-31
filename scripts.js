@@ -29,4 +29,46 @@ document.addEventListener('DOMContentLoaded', () => {
             location.href = target;
         });
     }
+
+    const modal = document.getElementById('task-modal');
+    if (modal) {
+        const iframe = document.getElementById('task-iframe');
+        const openButtons = document.querySelectorAll('[data-src]');
+
+        const openModal = (src) => {
+            if (iframe) {
+                iframe.src = src || '';
+            }
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            if (iframe) {
+                iframe.src = '';
+            }
+        };
+
+        openButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                openModal(button.getAttribute('data-src'));
+            });
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target && event.target.hasAttribute('data-modal-close')) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                closeModal();
+            }
+        });
+    }
 });

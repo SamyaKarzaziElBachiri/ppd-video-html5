@@ -17,16 +17,281 @@
     </div>
   </header>
 
-  <div class="tasks">
-    <section class="task card visible">
-      <div class="content">
-        <h3>Accés a les tasques</h3>
-        <div class="button-row">
-          <a href="tasca_1_2.html">Tasca 1.2</a>
-          <a href="tasca_1_4.html">Tasca 1.4</a>
+  <main class="task-stack" aria-label="Tasques PPD">
+    <section class="task-panel" id="tasca-1-1">
+      <div class="panel-body">
+        <h2>Tasca 1.1</h2>
+        <p>
+          Per aquesta tasca he utilitzat un clip gravat amb el mòbil. El fitxer original era
+          <code>IMG_3955.MOV</code> i, segons MediaInfo, estava codificat amb vídeo AVC/H.264, resolució 3840 x 2160, 25
+          fps i una durada de 28,123 segons. La taxa de bits del vídeo era d’uns 23,2 Mb/s i l’àudio estava en AAC LC a
+          182 kb/s.
+        </p>
+        <p>
+          Com que el vídeo original superava els 20 segons, l’he retallat amb Avidemux. També he reduït la resolució,
+          perquè el fitxer original era 4K i, per a una publicació web senzilla, no calia mantenir una mida tan alta. A
+          més, he revisat l’orientació, ja que MediaInfo indicava una rotació de 90° i en obrir-lo a Avidemux es veia
+          que podia aparèixer girat.
+        </p>
+        <p>
+          He generat dues versions del clip. La primera és en MP4 amb H.264/AAC, perquè és una combinació molt
+          compatible amb navegadors i dispositius. La segona és en WebM amb VP9/Opus, per tenir una alternativa de
+          reproducció en navegadors compatibles amb aquest format.
+        </p>
+        <p>
+          En el cas del WebM, la primera exportació em va quedar massa gran, amb una mida de 121.584 KB. Per això vaig
+          tornar a revisar la configuració a Avidemux i vaig ajustar millor la codificació: vaig mantenir el format WebM
+          amb vídeo VP9 i àudio Opus, però vaig reduir la taxa de bits del vídeo i vaig configurar l’àudio amb una taxa
+          més adequada per a web. També vaig haver de remostrejar l’àudio a 48 kHz, ja que el codificador Opus ho
+          requeria. Amb aquests canvis, el fitxer final va passar a ocupar 4.251 KB. Aquesta diferència m’ha servit per
+          veure millor que el bitrate afecta molt el pes final del fitxer, cosa que ja havíem treballat a la PAC2 quan
+          calculàvem factors de compressió.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Fitxer</th>
+              <th>Contenidor</th>
+              <th>Còdec de vídeo</th>
+              <th>Còdec d'àudio</th>
+              <th>Ús</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>tasca_1_1.mp4</code></td>
+              <td>MP4</td>
+              <td>H.264/AVC</td>
+              <td>AAC</td>
+              <td>Versió compatible</td>
+            </tr>
+            <tr>
+              <td><code>tasca_1_1.webm</code></td>
+              <td>WebM</td>
+              <td>VP9</td>
+              <td>Opus</td>
+              <td>Versió alternativa més lleugera</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Després de l’exportació, he comprovat els fitxers amb MediaInfo per confirmar que la codificació s’havia fet
+          correctament.
+        </p>
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-1-2">
+      <div class="panel-body">
+        <h2>Tasca 1.2</h2>
+        <p>
+          He creat una pàgina HTML5 per incrustar el vídeo directament al navegador. En aquesta pàgina he mostrat les
+          dues versions del clip, MP4 i WebM, en dos reproductors separats. Ho he fet així per comprovar visualment que
+          els dos fitxers es podien reproduir correctament.
+        </p>
+        <p>El codi utilitzat per al vídeo MP4 és:</p>
+        <pre><code>&lt;video controls preload="metadata" poster="src/poster.png" playsinline&gt;
+    &lt;source src="src/tasca_1_1.mp4" type="video/mp4"&gt;
+    El teu navegador no suporta l'etiqueta de video HTML5.
+&lt;/video&gt;
+</code></pre>
+        <p>I per al vídeo WebM:</p>
+        <pre><code>&lt;video controls preload="metadata" poster="src/poster.png" playsinline&gt;
+    &lt;source src="src/tasca_1_1.webm" type="video/webm"&gt;
+    El teu navegador no suporta l'etiqueta de video HTML5.
+&lt;/video&gt;
+</code></pre>
+        <p>
+          He utilitzat l’atribut <code>controls</code> perquè l’usuari pugui reproduir, pausar i controlar el volum del
+          vídeo. També he posat <code>preload="metadata"</code> perquè el navegador carregui només la informació bàsica
+          del vídeo d’entrada, com la durada, sense haver de descarregar-lo sencer només obrir la pàgina.
+          L’atribut<code>playsinline</code> l’he afegit pensant en dispositius mòbils, perquè el vídeo pugui
+          reproduir-se dins de la pàgina.
+        </p>
+        <p>
+          L'etiqueta <code>&lt;video&gt;</code> permet inserir vídeo sense dependre de plugins externs. Això és un
+          avantatge respecte a solucions antigues com Flash o Silverlight, que van desaparèixer sobretot per problemes
+          de seguretat, compatibilitat i manteniment. Amb HTML5, el navegador pot reproduir el vídeo de manera nativa i
+          la pàgina queda més senzilla.
+        </p>
+        <div class="video-row">
+          <div class="video-block">
+            <h3 class="video-caption">Format MP4 — H.264/AAC</h3>
+            <div class="video-wrap" role="region" aria-label="video MP4 de la tasca 1.2">
+              <video controls preload="metadata" poster="src/poster.png" playsinline>
+                <source src="src/tasca_1_1.mp4" type="video/mp4">
+                El teu navegador no suporta l'etiqueta de video HTML5.
+              </video>
+            </div>
+          </div>
+
+          <div class="video-block">
+            <h3 class="video-caption">Format WebM — VP9/Opus</h3>
+            <div class="video-wrap" role="region" aria-label="video WebM de la tasca 1.2">
+              <video controls preload="metadata" poster="src/poster.png" playsinline>
+                <source src="src/tasca_1_1.webm" type="video/webm">
+                El teu navegador no suporta l'etiqueta de video HTML5.
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="task-panel" id="tasca-1-3">
+      <div class="panel-body">
+        <h2>Tasca 1.3</h2>
+        <p>He publicat la web en una pàgina accessible públicament:</p>
+        <code>https://samyakarzazielbachiri.github.io/ppd-video-html5/tasca_1_2.html</code>
+        <p>
+        <div class="panel-actions">
+          <button class="panel-button" type="button" data-src="tasca_1_2.html">
+            Tasca 1.2
+          </button>
+          <button class="panel-button" type="button" data-src="tasca_1_4.html">
+            Tasca 1.4
+          </button>
+        </div>
+        <p>
+          La pàgina principal dona accés a la tasca 1.2 i a la tasca 1.4. Els fitxers estan organitzats amb els HTML a
+          l’arrel i els vídeos dins de la carpeta <code>src</code>.
+        </p>
+        <p>
+          A nivell d’usuari, l’experiència és correcta. La pàgina carrega bé, els vídeos es poden reproduir directament
+          des del navegador i no cal instal·lar cap complement extern. La qualitat visual em sembla suficient per al
+          tipus de publicació que es demana, sobretot tenint en compte que el vídeo original era 4K i s’ha preparat una
+          versió més lleugera per web.
+        </p>
+        <p>
+          També he notat que la reducció de mida del WebM ajuda a millorar la càrrega de la pàgina, ja que el fitxer
+          final és molt més lleuger que la primera exportació. Durant les proves, el WebM ha carregat més ràpid al
+          navegador, tot i que el MP4 continua sent una versió molt compatible. Per això he mantingut les dues versions
+          en el projecte.
+        </p>
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-1-4">
+      <div class="panel-body">
+        <h2>Tasca 1.4</h2>
+        <p>
+          En aquesta tasca he experimentat amb diferents atributs del tag <code>&lt;video&gt;</code>. A diferència de la
+          tasca 1.2, aquí he utilitzat un únic reproductor amb dues fonts alternatives. He posat primer el WebM perquè,
+          en les meves proves, es carregava més ràpid, i després el MP4 com a alternativa si el navegador no suporta
+          WebM.
+        </p>
+        <div class="video-block">
+          <h3 class="video-caption">video HTML5 amb atributs i fonts alternatives</h3>
+          <div class="video-wrap" role="region" aria-label="video de la tasca 1.4">
+            <video controls autoplay muted loop playsinline preload="auto" poster="src/poster.png" width="720"
+              aria-label="video HTML5 de la tasca 1.4 amb atributs avançats">
+              <source src="src/tasca_1_1.webm" type="video/webm">
+              <source src="src/tasca_1_1.mp4" type="video/mp4">
+              <track src="src/subtitols_ca.vtt" kind="subtitles" srclang="ca" label="Català">
+              El teu navegador no suporta l'etiqueta de video HTML5.
+            </video>
+          </div>
+        </div>
+        <p>Els atributs que he provat son:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Atribut</th>
+              <th>Funció</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>controls</code></td>
+              <td>Mostra els controls de reproducció.</td>
+            </tr>
+            <tr>
+              <td><code>autoplay</code></td>
+              <td>Intenta iniciar el vídeo automàticament.</td>
+            </tr>
+            <tr>
+              <td><code>muted</code></td>
+              <td>Inicia el vídeo sense so i ajuda que funcioni l'autoplay.</td>
+            </tr>
+            <tr>
+              <td><code>loop</code></td>
+              <td>Fa que el vídeo es repeteixi quan acaba.</td>
+            </tr>
+            <tr>
+              <td><code>playsinline</code></td>
+              <td>Permet reproduir el vídeo dins de la pàgina en mòbil.</td>
+            </tr>
+            <tr>
+              <td><code>preload="auto"</code></td>
+              <td>Permet al navegador carregar el vídeo amb antelació.</td>
+            </tr>
+            <tr>
+              <td><code>poster</code></td>
+              <td>Mostra una imatge inicial abans de reproduir.</td>
+            </tr>
+            <tr>
+              <td><code>width</code></td>
+              <td>Defineix una amplada de referencia del reproductor.</td>
+            </tr>
+            <tr>
+              <td><code>aria-label</code></td>
+              <td>Aporta una descripció del vídeo per accessibilitat.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          També he afegit subtítols amb l’etiqueta <code>&lt;track&gt;</code>, utilitzant un fitxer <code>.vtt</code>
+          en català. Els subtítols són senzills, però serveixen per provar una funcionalitat més del vídeo HTML5. En
+          aquest cas, no només he provat atributs visuals o de reproducció, sinó també una opció relacionada amb
+          l’accessibilitat.
+        </p>
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-1-5">
+      <div class="panel-body">
+        <h2>Tasca 1.5</h2>
+        <p>
+          Els CDN actuals no només serveixen per distribuir fitxers, sinó que també ofereixen serveis addicionals
+          relacionats amb vídeo. Alguns exemples són la transcodificació automàtica, l’streaming adaptatiu, la generació
+          de subtítols, la creació de miniatures, l’anàlisi d’escenes, la detecció de cares o objectes, el control
+          d’accés i l’analítica de reproducció.
+        </p>
+        <p>
+          La transcodificació automàtica permet generar diferents versions d’un mateix vídeo, per exemple en 1080p, 720p
+          o 480p. Això és útil perquè no tots els usuaris tenen la mateixa connexió ni utilitzen el mateix dispositiu.
+          En aquesta pràctica ho he fet manualment amb Avidemux, generant una versió MP4 i una versió WebM, però en un
+          projecte real aquest procés es podria automatitzar.
+        </p>
+        <p>
+          L’streaming adaptatiu també és important, perquè permet que el reproductor canviï de qualitat segons l’amplada
+          de banda disponible. Això ajuda a evitar interrupcions si la connexió empitjora. També són útils els subtítols
+          automàtics i les transcripcions, ja que milloren l’accessibilitat i permeten cercar millor dins del contingut.
+        </p>
+        <p>
+          Altres serveis, com la detecció de cares, objectes, escenes o canvis de pla, poden servir per indexar vídeos o
+          generar miniatures automàtiques. També hi ha serveis de seguretat, com DRM o URLs signades, i eines
+          d’analítica per saber quants usuaris han vist el vídeo, des d’on l’han vist o si hi ha hagut errors.
+        </p>
+        <p>
+          En resum, per una pràctica petita com aquesta no cal utilitzar tots aquests serveis, però sí que es veu la
+          idea principal: preparar bé el vídeo abans de publicar-lo i distribuir-lo de manera eficient. En un projecte
+          real, combinaria un origen d’emmagatzematge, un servei de transcodificació i una CDN per millorar la
+          compatibilitat, el rendiment i l’experiència d’usuari. Per exemple, serveis com AWS MediaConvert o Cloudflare
+          Stream permeten automatitzar part d’aquest procés.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="task-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" type="button" data-modal-close aria-label="Tancar">x</button>
+      <div class="modal-frame">
+        <iframe id="task-iframe" title="Vista de la tasca" loading="lazy"></iframe>
+      </div>
+    </div>
   </div>
 
   <footer class="page-footer">© 2026 Samya Karzazi El Bachiri — Assignatura: PPD</footer>
