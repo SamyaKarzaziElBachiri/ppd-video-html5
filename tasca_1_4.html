@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPD — Samya</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header class="page-banner">
+        <div class="container">
+            <h1>Plataformes de Publicació i Distribució — Pràctica</h1>
+            <div class="meta">Samya Karzazi El Bachiri</div>
+            <div class="page-switch" aria-label="Canviar entre Tasca 1.2 i Tasca 1.4">
+                <span>Tasca 1.2</span>
+                <label class="switch">
+                    <input id="page-toggle" type="checkbox" aria-label="Canviar de pagina">
+                    <span class="slider"></span>
+                </label>
+                <span>Tasca 1.4</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="tasks">
+        <section class="task card" id="tasca-1-4">
+            <div class="content">
+                <div class="video-block">
+                    <h3 class="video-caption">Vídeo HTML5 amb atributs i fonts alternatives</h3>
+                    <div class="video-wrap" role="region" aria-label="Vídeo de la tasca 1.4">
+                        <video controls autoplay muted loop playsinline preload="auto" poster="src/poster.png"
+                            width="720" aria-label="Vídeo HTML5 de la tasca 1.4 amb atributs avançats">
+                            <source src="src/tasca_1_1.mp4" type="video/mp4">
+                            <source src="src/tasca_1_1.webm" type="video/webm">
+                            <track src="src/subtitols_ca.vtt" kind="subtitles" srclang="ca" label="Català">
+                            El teu navegador no suporta l'etiqueta de vídeo HTML5.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer">© 2026 Samya Karzazi El Bachiri — Assignatura: PPD</footer>
+</body>
+
+</html>
