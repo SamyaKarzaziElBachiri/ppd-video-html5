@@ -14,10 +14,13 @@
     <div class="container">
       <h1>Plataformes de Publicació i Distribució — Pràctica</h1>
       <div class="meta">Samya Karzazi El Bachiri</div>
+      <a class="meta link-button" href="https://github.com/SamyaKarzaziElBachiri/ppd-video-html5" target="_blank"
+        rel="noopener noreferrer"><strong>🔗Code: </strong>https://github.com/SamyaKarzaziElBachiri/ppd-video-html5</a>
     </div>
   </header>
 
   <main class="task-stack" aria-label="Tasques PPD">
+    <h1>Exercici 1: Clip de vídeo incrustat en HTML 5</h1>
     <section class="task-panel" id="tasca-1-1">
       <div class="panel-body">
         <h2>Tasca 1.1</h2>
@@ -90,15 +93,15 @@
           els dos fitxers es podien reproduir correctament.
         </p>
         <p>El codi utilitzat per al vídeo MP4 és:</p>
-        <pre><code>&lt;video controls preload="metadata" poster="src/poster.png" playsinline&gt;
-    &lt;source src="src/tasca_1_1.mp4" type="video/mp4"&gt;
-    El teu navegador no suporta l'etiqueta de video HTML5.
+        <pre><code>&lt;video controls preload="metadata" poster="videos/ex1/poster.png" playsinline&gt;
+    &lt;source src="videos/ex1/tasca_1_1.mp4" type="video/mp4"&gt;
+      El teu navegador no suporta l'etiqueta de vídeo HTML5.
 &lt;/video&gt;
 </code></pre>
         <p>I per al vídeo WebM:</p>
-        <pre><code>&lt;video controls preload="metadata" poster="src/poster.png" playsinline&gt;
-    &lt;source src="src/tasca_1_1.webm" type="video/webm"&gt;
-    El teu navegador no suporta l'etiqueta de video HTML5.
+        <pre><code>&lt;video controls preload="metadata" poster="videos/ex1/poster.png" playsinline&gt;
+    &lt;source src="videos/ex1/tasca_1_1.webm" type="video/webm"&gt;
+      El teu navegador no suporta l'etiqueta de vídeo HTML5.
 &lt;/video&gt;
 </code></pre>
         <p>
@@ -117,20 +120,20 @@
         <div class="video-row">
           <div class="video-block">
             <h3 class="video-caption">Format MP4 — H.264/AAC</h3>
-            <div class="video-wrap" role="region" aria-label="video MP4 de la tasca 1.2">
-              <video controls preload="metadata" poster="src/poster.png" playsinline>
-                <source src="src/tasca_1_1.mp4" type="video/mp4">
-                El teu navegador no suporta l'etiqueta de video HTML5.
+            <div class="video-wrap" role="region" aria-label="vídeo MP4 de la tasca 1.2">
+              <video controls preload="metadata" poster="videos/ex1/poster.png" playsinline>
+                <source src="videos/ex1/tasca_1_1.mp4" type="video/mp4">
+                El teu navegador no suporta l'etiqueta de vídeo HTML5.
               </video>
             </div>
           </div>
 
           <div class="video-block">
             <h3 class="video-caption">Format WebM — VP9/Opus</h3>
-            <div class="video-wrap" role="region" aria-label="video WebM de la tasca 1.2">
-              <video controls preload="metadata" poster="src/poster.png" playsinline>
-                <source src="src/tasca_1_1.webm" type="video/webm">
-                El teu navegador no suporta l'etiqueta de video HTML5.
+            <div class="video-wrap" role="region" aria-label="vídeo WebM de la tasca 1.2">
+              <video controls preload="metadata" poster="videos/ex1/poster.png" playsinline>
+                <source src="videos/ex1/tasca_1_1.webm" type="video/webm">
+                El teu navegador no suporta l'etiqueta de vídeo HTML5.
               </video>
             </div>
           </div>
@@ -142,8 +145,7 @@
       <div class="panel-body">
         <h2>Tasca 1.3</h2>
         <p>He publicat la web en una pàgina accessible públicament:</p>
-        <code>https://samyakarzazielbachiri.github.io/ppd-video-html5/tasca_1_2.html</code>
-        <p>
+        <p><code>https://ppd.samchim.es</code></p>
         <div class="panel-actions">
           <button class="panel-button" type="button" data-src="tasca_1_2.html">
             Tasca 1.2
@@ -154,7 +156,7 @@
         </div>
         <p>
           La pàgina principal dona accés a la tasca 1.2 i a la tasca 1.4. Els fitxers estan organitzats amb els HTML a
-          l’arrel i els vídeos dins de la carpeta <code>src</code>.
+          l’arrel i els vídeos dins de la carpeta <code>videos/ex1</code>.
         </p>
         <p>
           A nivell d’usuari, l’experiència és correcta. La pàgina carrega bé, els vídeos es poden reproduir directament
@@ -181,18 +183,18 @@
           WebM.
         </p>
         <div class="video-block">
-          <h3 class="video-caption">video HTML5 amb atributs i fonts alternatives</h3>
-          <div class="video-wrap" role="region" aria-label="video de la tasca 1.4">
-            <video controls autoplay muted loop playsinline preload="auto" poster="src/poster.png" width="720"
-              aria-label="video HTML5 de la tasca 1.4 amb atributs avançats">
-              <source src="src/tasca_1_1.webm" type="video/webm">
-              <source src="src/tasca_1_1.mp4" type="video/mp4">
-              <track src="src/subtitols_ca.vtt" kind="subtitles" srclang="ca" label="Català">
-              El teu navegador no suporta l'etiqueta de video HTML5.
+          <h3 class="video-caption">Vídeo HTML5 amb atributs i fonts alternatives</h3>
+          <div class="video-wrap" role="region" aria-label="vídeo de la tasca 1.4">
+            <video controls autoplay muted loop playsinline preload="auto" poster="videos/ex1/poster.png" width="720"
+              aria-label="vídeo HTML5 de la tasca 1.4 amb atributs avançats">
+              <source src="videos/ex1/tasca_1_1.webm" type="video/webm">
+              <source src="videos/ex1/tasca_1_1.mp4" type="video/mp4">
+              <track src="videos/ex1/subtitols_ca.vtt" kind="subtitles" srclang="ca" label="Català">
+              El teu navegador no suporta l'etiqueta de vídeo HTML5.
             </video>
           </div>
         </div>
-        <p>Els atributs que he provat son:</p>
+        <p>Els atributs que he provat són:</p>
         <table>
           <thead>
             <tr>
@@ -231,7 +233,7 @@
             </tr>
             <tr>
               <td><code>width</code></td>
-              <td>Defineix una amplada de referencia del reproductor.</td>
+              <td>Defineix una amplada de referència del reproductor.</td>
             </tr>
             <tr>
               <td><code>aria-label</code></td>
@@ -282,6 +284,281 @@
         </p>
       </div>
     </section>
+
+    <h1>Exercici 2: Pràctica de streaming d'un vídeo local</h1>
+    <section class="task-panel" id="tasca-2-1">
+      <div class="panel-body">
+        <h2>Tasca 2.1</h2>
+        <p>
+          Per aquesta tasca he generat un nou fitxer <code>clip01.mkv</code> amb Avidemux. El vídeo original tenia una
+          resolució de 2556 x 1180, així que l’he redimensionat a 1280 x 592 amb el filtre <code>swsResize</code>. He
+          mantingut la relació d’aspecte original per no deformar la imatge i, al mateix temps, fer que el fitxer fos
+          més adequat per a l’emissió amb VLC.
+        </p>
+        <p>
+          Segons MediaInfo, el fitxer final està en contenidor Matroska/MKV, té una durada de 17,745 segons i una mida
+          de 10,7 MiB. La taxa de bits global és de 5.066 kb/s. El vídeo està codificat en AVC/H.264, amb una taxa de
+          bits de 5.000 kb/s i una resolució de 1280 x 592. L’àudio està codificat en MPEG Audio/MP3 a 128 kb/s, amb
+          dos canals i una freqüència de mostreig de 44,1 kHz.
+        </p>
+        <p>
+          Amb aquesta comprovació he verificat que el fitxer compleix la configuració demanada: contenidor MKV, vídeo
+          MPEG-4 AVC/H.264 i àudio MP3.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Paràmetre</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fitxer</td>
+              <td><code>clip01.mkv</code></td>
+            </tr>
+            <tr>
+              <td>Contenidor</td>
+              <td>Matroska / MKV</td>
+            </tr>
+            <tr>
+              <td>Durada</td>
+              <td>17,745 s</td>
+            </tr>
+            <tr>
+              <td>Mida</td>
+              <td>10,7 MiB</td>
+            </tr>
+            <tr>
+              <td>Taxa de bits global</td>
+              <td>5.066 kb/s</td>
+            </tr>
+            <tr>
+              <td>Còdec de vídeo</td>
+              <td>AVC / H.264</td>
+            </tr>
+            <tr>
+              <td>Resolució</td>
+              <td>1280 x 592</td>
+            </tr>
+            <tr>
+              <td>Relació d’aspecte</td>
+              <td>2.2:1</td>
+            </tr>
+            <tr>
+              <td>Taxa de bits de vídeo</td>
+              <td>5.000 kb/s</td>
+            </tr>
+            <tr>
+              <td>Còdec d’àudio</td>
+              <td>MPEG Audio / MP3</td>
+            </tr>
+            <tr>
+              <td>Taxa de bits d’àudio</td>
+              <td>128 kb/s</td>
+            </tr>
+            <tr>
+              <td>Canals</td>
+              <td>2 canals</td>
+            </tr>
+            <tr>
+              <td>Mostreig d’àudio</td>
+              <td>44,1 kHz</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-2-2">
+      <div class="panel-body">
+        <h2>Tasca 2.2</h2>
+        <p>
+          Per fer l’emissió he obert el fitxer <code>clip01.mkv</code> amb VLC i l’he enviat per RTP cap a l’adreça
+          local. En el meu cas, el flux s’ha rebut amb l’adreça <code>rtp://127.0.0.1:5001</code>.
+        </p>
+        <div class="video-block">
+          <h3 class="video-caption">clip01.mkv (streaming local)</h3>
+          <div class="video-wrap compact" role="region" aria-label="video local clip01.mkv">
+            <video controls preload="metadata" playsinline>
+              <source src="videos/ex2/clip01.mkv" type="video/x-matroska">
+              El teu navegador no suporta l'etiqueta de vídeo HTML5.
+            </video>
+          </div>
+        </div>
+        <p>
+          A la informació del còdec del VLC emissor es veu que el vídeo utilitzat està codificat en H.264 / MPEG-4
+          AVC, amb resolució 1280 x 592 i una taxa de fotogrames aproximada de 24,767 fps. L’àudio apareix com a MPEG
+          Audio layer 1/2, amb canals estèreo, freqüència de mostreig de 44,1 kHz i bitrate descodificat de 128 kb/s.
+        </p>
+        <p>
+          A la captura comparativa amb el receptor es pot veure que aquests valors coincideixen amb els del flux rebut.
+          Això indica que l’emissió manté el còdec de vídeo i el format d’àudio configurats al fitxer original.
+        </p>
+        <img class="task-image" src="videos/ex2/t2_2.png" alt="Captura de la Tasca 2.2">
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-2-3">
+      <div class="panel-body">
+        <h2>Tasca 2.3</h2>
+        <p>
+          Al VLC receptor he obert el flux amb l’adreça <code>rtp://127.0.0.1:5001</code>. A la finestra d’informació
+          del còdec es pot veure que el flux rebut manté el vídeo en H.264 / MPEG-4 AVC, amb resolució 1280 x 592 i una
+          taxa de fotogrames aproximada de 24,767 fps. L’àudio rebut apareix com a MPEG Audio layer 1/2, en estèreo i
+          amb bitrate descodificat de 128 kb/s.
+        </p>
+        <p>
+          La captura on es mostren alhora l’emissor i el receptor permet comprovar que el flux rebut conserva les
+          característiques principals del fitxer emès. Per tant, el receptor està reproduint el mateix tipus de vídeo i
+          àudio que s’ha configurat a l’emissió.
+        </p>
+        <p>
+          Tot i això, a les estadístiques del receptor es veuen alguns fotogrames perduts i alguns buffers d’àudio
+          perduts. Això explica que la reproducció pugui tenir petites irregularitats. Aquesta prova m’ha servit per
+          veure que el fet que el flux arribi correctament no vol dir que la reproducció sigui sempre perfecta, ja que
+          també influeixen el buffer, la càrrega del sistema i la manera com VLC processa l’emissió en temps real.
+        </p>
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-2-4">
+      <div class="panel-body">
+        <h2>Tasca 2.4</h2>
+        <p>
+          En iniciar l’emissió amb el VLC emissor, el VLC receptor no mostra el vídeo de manera immediata. He observat
+          un retard aproximat d’entre 2 i 4 segons fins que el flux comença a reproduir-se al receptor. El mateix passa
+          quan pauso l’emissor: el receptor tampoc s’atura al moment, sinó que continua reproduint durant uns segons
+          abans que la pausa es reflecteixi.
+        </p>
+        <p>
+          Aquest comportament té sentit perquè el receptor treballa amb un buffer. Abans de començar a reproduir,
+          necessita acumular una petita quantitat de dades per evitar talls. De la mateixa manera, quan l’emissor
+          s’atura o es pausa, el receptor encara té dades guardades i pot continuar reproduint durant uns segons.
+        </p>
+        <p>
+          Per tant, aquest retard forma part del funcionament normal d’un flux en temps real. El buffer ajuda a fer la
+          reproducció més estable si l’arribada de dades no és totalment regular, però també introdueix una diferència
+          de temps entre el que passa a l’emissor i el que veu el receptor.
+        </p>
+        <img class="task-image" src="videos/ex2/t2_4.png" alt="Captura de la Tasca 2.4">
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-2-5">
+      <div class="panel-body">
+        <h2>Tasca 2.5</h2>
+        <p>
+          Per calcular el factor de compressió he utilitzat les taxes de bits observades a VLC durant la prova. En la
+          captura de l’emissió es veu que el VLC emissor mostra una taxa de bits del contingut d’aproximadament 6.175
+          kb/s. En el VLC receptor, la taxa de bits del contingut mostrada és d’uns 66 kb/s.
+        </p>
+        <img class="task-image" src="videos/ex2/t2_5.png" alt="Captura de la Tasca 2.5">
+        <p>
+          Si faig el càlcul directe amb aquests dos valors:
+        </p>
+        <p>
+          Factor aproximat = 6.175 / 66 = 93,56
+        </p>
+        <p>
+          Per tant, segons les estadístiques visibles de VLC en aquell moment, el factor calculat seria
+          aproximadament de 93,56:1.
+        </p>
+        <p>
+          Tot i això, aquest valor s’ha d’interpretar amb prudència. Les estadístiques del receptor en VLC no es
+          mantenen estables i depenen molt del moment de la captura, del buffer i de les pèrdues de fotogrames. En la
+          mateixa captura també es veuen 18 fotogrames de vídeo perduts i 1 buffer d’àudio perdut. Per tant, aquest
+          càlcul serveix com a aproximació a partir de les dades mostrades per VLC, però no com una mesura exacta de
+          compressió real del fitxer.
+        </p>
+        <p>
+          Si comparo el bitrate global del fitxer segons MediaInfo, 5.066 kb/s, amb la taxa de bits d’entrada observada
+          a l’emissor, 5.023 kb/s, el resultat és molt més proper:
+        </p>
+        <p>
+          Factor aproximat = 5.066 / 5.023 = 1,01
+        </p>
+        <p>
+          Aquest segon valor és més coherent amb el fet que el fitxer ja estava codificat en H.264 a 5.000 kb/s i que
+          VLC l’estava emetent mantenint el mateix còdec principal. La diferència més gran observada al receptor ve
+          sobretot de com VLC mostra les estadístiques durant la recepció RTP i del comportament del buffer.
+        </p>
+      </div>
+    </section>
+
+    <section class="task-panel" id="tasca-2-6">
+      <div class="panel-body">
+        <h2>Tasca 2.6</h2>
+        <p>
+          Per portar aquesta prova a un cas real de streaming en directe, faria servir una arquitectura al núvol amb
+          serveis de codificació, empaquetat i distribució per CDN. Una opció possible seria treballar amb AWS Elemental
+          MediaLive, AWS Elemental MediaPackage i Amazon CloudFront.
+        </p>
+        <p>
+          La idea general s’assembla al que passa en plataformes com Twitch. Quan algú fa un directe, normalment envia
+          el senyal des d’un programa com OBS cap a la plataforma, i després és la pròpia plataforma qui processa el
+          vídeo i el distribueix als espectadors. En aquest cas, amb AWS, la diferència és que es pot veure més clar
+          quina part faria cada servei.
+        </p>
+        <p>
+          El procés començaria amb una font de vídeo en directe, com una càmera o OBS. Aquest senyal arribaria a AWS
+          Elemental MediaLive, que faria la codificació en temps real. Aquí es podrien generar diverses qualitats del
+          mateix directe, per exemple una versió amb més qualitat i una altra més lleugera per a usuaris amb pitjor
+          connexió.
+        </p>
+        <p>
+          Després, el flux passaria a AWS Elemental MediaPackage. Aquest servei prepararia el contingut en formats
+          pensats per a la distribució per internet, com HLS o DASH. D’aquesta manera, el reproductor no descarrega un
+          únic fitxer gran, sinó petits fragments de vídeo que es van carregant durant la reproducció.
+        </p>
+        <p>
+          Finalment, Amazon CloudFront faria de CDN. Això permetria distribuir el directe des de punts més propers als
+          usuaris i evitar que totes les peticions arribessin directament a l’origen. En un directe amb molts
+          espectadors, aquesta part seria important per millorar l’estabilitat i reduir la càrrega del sistema.
+        </p>
+        <p>
+          L’arquitectura es podria resumir així:
+        </p>
+        <img class="task-image" src="videos/ex2/t2_6.png" alt="Arquitectura de la Tasca 2.6">
+        <p>
+          A nivell de gestió, caldria configurar permisos IAM perquè cada servei només pugui accedir als recursos que
+          necessita. També faria servir CloudWatch per controlar possibles errors, consum, mètriques del canal i
+          incidències durant l’emissió.
+        </p>
+        <p>
+          Pel que fa als costos, s’haurien de tenir en compte diversos elements: el temps que MediaLive està codificant,
+          el processament de MediaPackage, la transferència de dades a través de CloudFront i el nombre de peticions dels
+          usuaris. Per reduir costos, intentaria generar només les qualitats necessàries, apagar els canals quan no
+          s’utilitzen i revisar periòdicament les mètriques de consum.
+        </p>
+        <p>
+          Comparat amb la prova feta amb VLC, aquesta arquitectura seria molt més adequada per a un servei real. VLC
+          m’ha servit per entendre el funcionament bàsic d’un emissor, un receptor, el buffer i el retard del flux. Però
+          si hi hagués molts usuaris connectats, seria millor utilitzar una solució al núvol amb codificació, empaquetat
+          i CDN, perquè seria més estable i escalable.
+        </p>
+      </div>
+    </section>
+
+    <section class="task-panel" id="recursos-utilitzats">
+      <div class="panel-body">
+        <h2>Recursos utilitzats</h2>
+        <p>
+          Per a l’exercici 2 s’ha utilitzat un fragment curt del vídeo “BTS Performs ‘Swim’ | BTS: THE RETURN | Netflix
+          Philippines”, disponible a YouTube. Aquest recurs s’ha fet servir només amb finalitat acadèmica i per a una
+          prova tècnica de codificació i streaming local amb VLC. Com que no s’ha identificat una llicència oberta
+          associada al vídeo, s’assumeix que és un recurs protegit per copyright. Per aquest motiu, no es considera
+          material propi ni es reutilitza amb finalitats comercials.
+        </p>
+        <p>🔗 
+          <a href="https://www.youtube.com/watch?v=j72OhXi8B3A" target="_blank" rel="noopener noreferrer">
+            https://www.youtube.com/watch?v=j72OhXi8B3A
+          </a>
+        </p>
+      </div>
+    </section>
+
+
   </main>
 
   <div class="modal" id="task-modal" aria-hidden="true" role="dialog" aria-modal="true">
